@@ -126,6 +126,41 @@ python -m titrack serve --no-window
 <img width="3336" height="2100" alt="image" src="https://github.com/user-attachments/assets/886d5739-436f-4c07-9bfe-0e5a71425296" />
 
 ---
+---
+
+## 🔄 Daily Usage: How to Run After a Restart
+
+Once the initial setup is complete, you don't need to repeat all steps. Follow these **3 simple steps** every time you restart your PC or start a new gaming session:
+
+### Step 1: Connect your Device
+Connect your Android device via cable or Wi-Fi. Ensure it is visible by running:
+```powershell
+adb devices
+```
+
+### Step 2: Start the Data Bridge
+Open a PowerShell window and run the bridge loop to start pulling logs:
+```powershell
+while ($true) { adb pull "/sdcard/Android/data/com.xd.TLglobal/files/UE4Game/UE_game/UE_game/Saved/Logs/UE_game.log" "$env:USERPROFILE\Desktop\TLI_Data\UE_game.log.tmp" *>$null; Move-Item -Path "$env:USERPROFILE\Desktop\TLI_Data\UE_game.log.tmp" -Destination "$env:USERPROFILE\Desktop\TLI_Data\UE_game.log" -Force; Write-Host -NoNewline "."; Start-Sleep -Seconds 5 }
+```
+
+### Step 3: Launch TITrack
+Open **two separate** PowerShell windows and run the following (copy-paste each block):
+
+**Window A (Tail):**
+```powershell
+cd $env:USERPROFILE\Desktop\TITrack; $env:PYTHONPATH = "$($PWD.Path)\src"; python -m titrack tail "$env:USERPROFILE\Desktop\TLI_Data\UE_game.log"
+```
+
+**Window B (Serve):**
+```powershell
+cd $env:USERPROFILE\Desktop\TITrack; $env:PYTHONPATH = "$($PWD.Path)\src"; python -m titrack serve --no-window
+```
+
+4. Open `http://127.0.0.1:8000` in your browser and you are ready to farm! 🚀
+
+---
+---
 
 
 <a name="türkçe-versiyon"></a>
