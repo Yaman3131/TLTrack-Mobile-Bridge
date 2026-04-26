@@ -15,7 +15,7 @@
 ## 🪟 Windows Installation Guide
 
 > [!IMPORTANT]
-> **Important Note:** All steps below must be executed in **Windows PowerShell** (or Windows Terminal). The classic Command Prompt (CMD) does not support certain environment variables (`$env:`) and may cause errors.
+> **Important Note:** All steps below must be executed in **Windows PowerShell** (. The classic Command Prompt (CMD) does not support certain environment variables (`$env:`) and may cause errors.
 
 ### Step 1: Android Device Preparation
 1. Go to **Settings > About Phone**.
