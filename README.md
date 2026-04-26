@@ -129,6 +129,8 @@ python -m titrack serve --no-window
 
 
 <a name="türkçe-versiyon"></a>
+#(Turkish)
+
 ##  Windows Kurulum Rehberi
 
 > [!IMPORTANT]
