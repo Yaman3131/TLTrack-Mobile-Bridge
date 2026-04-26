@@ -119,9 +119,3 @@ python -m titrack serve --no-window
 4. **Cloud Sync** seçeneğini işaretleyerek verileri senkronize edin.
 
 ---
-
-### 📶 Kablosuz Bağlantı (Opsiyonel)
-Kabloya bağlı kalmak istemiyorsanız (Aynı Wi-Fi ağındaysanız):
-1. Kablo takılıyken: `adb tcpip 5555`
-2. Tablet IP'sini bulun (Ayarlar > Durum) ve kabloyu çekip bağlanın: 
-   `adb connect 192.168.1.XX:5555`
