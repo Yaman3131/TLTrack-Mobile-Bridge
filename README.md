@@ -2,7 +2,6 @@
 
 # 🛰️ TLTrack-Mobile-Bridge for Windows
 
-Bu proje, Android cihazınızdaki **Torchlight: Infinite** log verilerini anlık olarak Windows bilgisayarınıza çeker ve **TITrack** yazılımı üzerinden analiz etmenizi sağlar.
 
 ---
 
